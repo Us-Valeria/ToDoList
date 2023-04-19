@@ -1,0 +1,76 @@
+.App {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  min-height: 100vb;
+  background-color: rgba(255, 230, 181, 0.51);
+  font-family: serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.Input_Field {
+  margin-left: 35%;
+  margin-top: 25px;
+}
+
+.Field {
+  height: 30px;
+  width: 300px;
+  margin-top: 15px;
+  background: none;
+}
+
+.Button_Save {
+  height: 35px;
+  box-sizing: border-box;
+  width: 100px;
+  background: #4f4f4f;
+  color: antiquewhite;
+  cursor: pointer;
+}
+.Button_Save:hover {
+  background: none;
+  border: 2px solid #4f4f4f;
+  color: #4f4f4f;
+}
+
+.Buttons {
+  text-align: center;
+  position: relative;
+  top: 5px;
+  margin-left: 2px;
+  height: 25px;
+  box-sizing: border-box;
+  width: 100px;
+  border: 2px solid #4f4f4f;
+  background: none;
+  color: #4f4f4f;
+  cursor: pointer;
+}
+.Buttons:hover {
+  background: #4f4f4f;
+  color: antiquewhite;
+}
+
+li {
+  list-style: none;
+  top: 35%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: auto;
+  text-transform: capitalize;
+  box-shadow: 1px 1px 1px 1px#4f4f4f;
+  max-width: 50%;
+  font-size: 18px;
+}
+
+svg {
+  height: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+}
