@@ -1,36 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-let nextId = 0;
-
 function App() {
   const [item, setItem] = useState('');
   const [items, setItems] = useState(JSON.parse(localStorage.getItem('items')));
-  let [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState('all'); // eslint-disable-line no-unused-vars
 
   useEffect(() => {
     localStorage.setItem('items', JSON.stringify(items));
   });
 
   const addItem = (item) => {
-    if (item === '') return;
+    if (!item.trim()) return;
     const newItem = {
-      id: nextId++,
+      id: Date(),
       todo: item,
       completed: false,
     };
-    let newItems = [...items, newItem];
-    setItems(newItems);
+    setItems([...items, newItem]);
   };
 
   const changeFilter = (status) => {
     if (status === 'active') {
-      filter = items.filter((t) => t.completed === false);
+      let filterItem = items.filter((t) => t.completed === false);
+      setFilter(filterItem);
+    } else if (status === 'completed') {
+      let filterItem = items.filter((t) => t.completed === true);
+      setFilter(filterItem);
     }
-    if (status === 'completed') {
-      filter = items.filter((t) => t.completed === true);
-    }
-    setFilter(filter);
   };
 
   const removeItem = (id) => {
