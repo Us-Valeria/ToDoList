@@ -10,8 +10,7 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('items', JSON.stringify(items));
-    changeFilter('all');
-  }, [items]);
+  }, [items]); // eslint-disable-line
 
   const addItem = (item) => {
     if (!item.trim()) return;
