@@ -20,6 +20,7 @@ function App() {
       completed: false,
     };
     setItems([...items, newItem]);
+    setFilter([...filter, newItem]);
   };
 
   const changeFilter = (status) => {
