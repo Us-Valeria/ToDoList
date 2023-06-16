@@ -51,6 +51,7 @@ function App() {
       return item;
     });
     setItems(updatedItems);
+    setFilter(updatedItems);
     changeFilter(filter);
   };
 
