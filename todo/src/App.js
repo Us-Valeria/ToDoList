@@ -98,6 +98,7 @@ function App() {
           <button
             className="button"
             type="radio"
+            autoFocus
             onClick={() => changeFilter('all')}
           >
             Все
