@@ -57,7 +57,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Список задач: </h1>
+      <h1>Список задач </h1>
       <div className="input-field">
         <input
           className="field"
@@ -118,7 +118,7 @@ function App() {
                       changeStatusItem(item.id, e.currentTarget.checked)
                     }
                   />
-                  <span>{item.todo}</span>
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -140,6 +140,7 @@ function App() {
                   0a48.667 48.667 0 00-7.5 0"
                     />
                   </svg>
+                  <span>{item.todo}</span>
                 </li>
               )
           )}
